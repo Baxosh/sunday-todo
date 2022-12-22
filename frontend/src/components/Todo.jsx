@@ -11,7 +11,7 @@ export default function Todo({ todo, editing, theme, index, setEditing, loadTodo
 	function removeTodo(id) {
 		setLoadingDelete(true)
 
-		fetch('http://localhost:8000/todo/' + id, { method: 'DELETE' }) // API - https://localhost:8000/todo/id
+		fetch(TODO.replace('id', id), { method: 'DELETE' }) // API - https://localhost:8000/todo/id
 			.then(loadTodos)
 			.catch(console.error)
 			.finally(() => setLoadingDelete(false))
