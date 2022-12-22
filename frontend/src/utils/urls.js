@@ -1,2 +1,3 @@
-export const TODOS = 'http://localhost:8000/todos' // GET, POST
-export const TODO = 'http://localhost:8000/todo/id' // PUT, DELETE
+export const domain = process.env.REACT_APP_BASE_URL || `${window.location.protocol}//${window.location.hostname}`
+export const TODOS = `${domain}todos` // GET, POST
+export const TODO = `${domain}todo/id` // PUT, DELETE
